@@ -10,11 +10,7 @@ function calculateFactorial(number) {
         return NaN;
     }
     
-    if (number === 0) {
-        return 1;
-    }
-
-    return number * calculateFactorial(number - 1);
+    return number === 0 ? 1 : number * calculateFactorial(number - 1);
 }
 
 // Test cases
