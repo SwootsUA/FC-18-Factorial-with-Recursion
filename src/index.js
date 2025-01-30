@@ -17,12 +17,14 @@ function calculateFactorial(number) {
     return number * calculateFactorial(number - 1);
 }
 
-let userInputNumber = parseInt(prompt('Enter a number to calculate its factorial: '));
+// Test cases
+console.log(calculateFactorial(10)); // 3628800
+console.log(calculateFactorial(6)); // 720
+console.log(calculateFactorial(5)); // 120
+console.log(calculateFactorial(0)); // 1
 
-let factorial = calculateFactorial(userInputNumber);
-
-if (Number.isNaN(factorial)) {
-    alert(`${userInputNumber} is not a valid number, please provide a valid number`);
-} else {
-    alert(`The factorial of ${userInputNumber} is ${factorial}`);
-}
+// Faulty test cases
+console.log(calculateFactorial('5')); // NaN
+console.log(calculateFactorial(-5)); // NaN
+console.log(calculateFactorial(5.5)); // NaN
+console.log(calculateFactorial(Infinity)); // NaN
