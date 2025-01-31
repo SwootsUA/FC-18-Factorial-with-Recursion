@@ -7,10 +7,8 @@
  */
 function calculateFactorial(number) {
     if (
-        typeof number !== 'number' ||
-        number < 0 ||
-        Number.isNaN(number) ||
         !Number.isInteger(number) ||
+        number < 0 ||
         !Number.isFinite(number)
     ) {
         return NaN;
