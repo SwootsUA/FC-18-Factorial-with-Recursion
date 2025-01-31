@@ -6,10 +6,16 @@
  * @returns {number} factorial of the number
  */
 function calculateFactorial(number) {
-    if (typeof number !== 'number' || number < 0 || Number.isNaN(number) || !Number.isInteger(number) || !Number.isFinite(number)) {
+    if (
+        typeof number !== 'number' ||
+        number < 0 ||
+        Number.isNaN(number) ||
+        !Number.isInteger(number) ||
+        !Number.isFinite(number)
+    ) {
         return NaN;
     }
-    
+
     return number === 0 ? 1 : number * calculateFactorial(number - 1);
 }
 
